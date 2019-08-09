@@ -27,10 +27,10 @@
       "@app": ["./app"],
       "@api/*": ["api/*"],
       "@config": ["config"],
-      "@connection": ["connection"],
+      "@connection": ["util/connection"],
       "@seed": ["seed"],
       "@tests": ["tests"],
-      "@util": ["util"]
+      "@util": ["util"],
     }
   },
   "include": [

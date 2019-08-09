@@ -3,15 +3,15 @@ module.exports = {
     '^.+\\.tsx?$': 'ts-jest'
   },
   testEnvironment: 'node',
-  testMatch: ['**/*.spec.ts'],
+  testMatch: ['**/*.test.ts'],
   coverageDirectory: './coverage/',
   coveragePathIgnorePatterns: [
     '.d.ts$',
-    '.spec.ts',
+    '.test.ts',
     'src/index.ts',
     'src/config',
-    'connection/database',
-    'connection/server',
+    'util/connection/database',
+    'util/connection/server',
   ],
   collectCoverageFrom : ['src/**/*.ts'],
   moduleFileExtensions: [
@@ -29,7 +29,7 @@ module.exports = {
     '@app': '<rootDir>/src/app.ts',
     '@api/(.*)': '<rootDir>/src/api/$1',
     '@config': '<rootDir>/src/config',
-    '@connection': '<rootDir>/src/connection',
+    '@connection': '<rootDir>/src/util/connection',
     '@seed': '<rootDir>/src/seed',
     '@tests': '<rootDir>/src/tests',
     '@util': '<rootDir>/src/util',

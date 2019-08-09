@@ -12,7 +12,7 @@
     "start": "yarn start:prod",
     "start:dev": "ts-node -r tsconfig-paths/register src/index.ts",
     "start:prod": "node -r ./tsconfig-paths.js dist/index.js",
-    "watch": "nodemon --watch src --ext ts --ignore '*.spec.ts' --exec yarn start:dev",
+    "watch": "nodemon --watch src --ext ts --ignore '*.test.ts' --exec yarn start:dev",
     "lint": "tslint --config tslint.json --project tsconfig.json",
     "pretest": "yarn lint",
     "test": "./scripts/test.sh",

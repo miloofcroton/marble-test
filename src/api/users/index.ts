@@ -1,3 +1,4 @@
-export * from './users.api';
-export * from './effects';
+export * from './api';
 export * from './model';
+export * from './effects';
+export * from './methods';
