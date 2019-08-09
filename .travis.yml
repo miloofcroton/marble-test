@@ -1,0 +1,38 @@
+sudo: false
+dist: trusty
+language: node_js
+services:
+- docker
+node_js:
+- '8'
+cache:
+  directories:
+  - node_modules
+git:
+  submodules: false
+env:
+  DOCKER_COMPOSE_VERSION: 1.8.0
+before_install:
+- docker-compose -f .docker/docker-compose.yml up --build -d
+- sleep 5
+install:
+- gem install apiaryio
+- cp src/config/env.ts.dist src/config/env.ts
+- npm install -g codecov
+- npm install -g yarn
+- yarn
+script:
+- yarn test
+- codecov
+- ./scripts/apiary.sh
+branches:
+  only:
+  - master
+  - develop
+deploy:
+  provider: heroku
+  api_key:
+    secure: woHhEo/IK3OepCPip618g1By+uxxXHC8IHyh+OgPCLa0JDJNCNQHoSWNBNA/oWxBTJjDrsU3GUiWtZpHyJlSZRe7TJJ37mWZGpMMfzSjG9k0vz3RVQxxW9W8iETGvqOrn851V5Wfguz/aAOr7l+TiaNYIiQM6ER+80v+jDLmicVHsa6c9HJCheLXOrk+I7zvO+vL6N5cIa9pFn8toJFPIls4u4q7eluGBicpDe3GR2IB1/Ob39QbY+S1YbAWiX2xyhfHJ/KM//YjC19aLWNuZoXXOGWFKPI3R9Yi9cZt7yMyVG85DA+ftrbG5fjW4x9hQed4o42kmZ7HsExXlmPUCfBwEifcLdR5ClzD9KqPmHGd2sREs+eSVVUUNmQzXEfNjrsBq/8+GDCCKaRqyqINR1ua8oHUn9cq6W/2y0TwKCcCPjEhpNgMoLgyxWX+VgpgVTdRiB5Z26f/XzijycM6tbJUENtIKP2QZVPI0oP4lkWVjF/SmJqMHIT6gQn7RuXt3J/x9SG4FQpt8pOQ/1VWeKOb7o0Ao017Xr8VAUG0arvAmlyJfqTeF2bSJyFn09LwvYmKPZg9joK0CkAEtJSMasvJ9cX1s4m4Cl9LHsQGIcHtDDFpQk1h/eky+PGSYJ7SOtjz5b3jww69uBA0cMVIqDYamvzvsJkPCLVOdoXhqnE=
+  app: marblejs-example
+  on:
+    repo: marblejs/example
