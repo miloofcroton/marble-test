@@ -60,7 +60,8 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "heroku-prebuild": "cp ./src/config/env.ts.dist ./src/config/env.ts",
+    "env:setup": "cp ./src/util/config/env.ts.dist ./src/util/config/env.ts",
+    "heroku-prebuild": "yarn env:setup",
     "heroku-postbuild": "yarn db:seed",
     "postinstall": "./scripts/postinstall.sh",
     "clear": "rimraf dist",
@@ -74,9 +75,9 @@
     "test": "./scripts/test.sh",
     "test:watch": "jest --expand --onlyChanged --watch",
     "docker": "docker-compose -f .docker/docker-compose.yml up --build -d",
-    "doc": "mkdir -p ./dist && hercule src/resources/index.apib -o ./dist/docs.apib",
+    "doc": "mkdir -p ./dist && hercule src/util/docs/index.apib -o ./dist/docs.apib",
     "doc:preview": "apiary preview --path dist/docs.apib",
-    "db:seed": "yarn ts-node -r tsconfig-paths/register src/util/seed.ts"
+    "db:seed": "yarn ts-node -r tsconfig-paths/register src/util/database/seed.ts"
   },
   "lint-staged": {
     "*.ts": [

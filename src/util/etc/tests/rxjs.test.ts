@@ -1,6 +1,14 @@
 import { merge } from 'rxjs';
 import { toArray, take } from 'rxjs/operators';
-import { neverNullable } from '../rxjs';
+import { isNullable, neverNullable } from '../rxjs';
+
+test('#isNullable checks if parameter is null or undefined', () => {
+  expect(isNullable('0')).toEqual(false);
+  expect(isNullable(0)).toEqual(false);
+  expect(isNullable(false)).toEqual(false);
+  expect(isNullable(undefined)).toEqual(true);
+  expect(isNullable(null)).toEqual(true);
+});
 
 test('#neverNullable throws streamed error if parameter is nullable', done => {
   // given
@@ -29,3 +37,4 @@ test('#neverNullable throws streamed error if parameter is nullable', done => {
   );
 
 });
+

@@ -2,7 +2,7 @@ import * as request from 'supertest';
 import { throwError } from 'rxjs';
 import { createContext } from '@marblejs/core';
 import * as FileHelper from '@marblejs/core/dist/+internal/files';
-import httpListener from '../../app';
+import httpListener from '../../../app';
 
 describe('getFileEffect$', () => {
   const app = httpListener.run(createContext());
@@ -36,32 +36,4 @@ describe('getFileEffect$', () => {
         message: 'Internal server error'
       }});
   });
-});
-
-describe('notFoundEffect$', () => {
-  const app = httpListener.run(createContext());
-
-  test('GET api/v1/undefined responds with 400', async () =>
-    request(app)
-      .get('/api/v1/undefined')
-      .expect(404, { error: { status: 404, message: 'Route not found' } }));
-});
-
-
-describe('preflightEffect$', () => {
-  const app = httpListener.run(createContext());
-
-  test('GET /api/v1 responds with 200', async () =>
-    request(app)
-      .options('/api/v1')
-      .expect(200));
-});
-
-describe('versionEffect$', () => {
-  const app = httpListener.run(createContext());
-
-  test('GET api/v1 responds with 200', async () =>
-    request(app)
-      .get('/api/v1')
-      .expect(200, '"API version: v1"'));
 });

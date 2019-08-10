@@ -1,6 +1,6 @@
-import { mockMovie } from '../../resources/movies/fixtures/mocks';
-import { MoviesMethods } from '../../resources/movies/api/methods';
-import { applyCollectionQuery, SortDir } from '../helpers';
+import { mockMovie } from '../../../resources/movies/fixtures/mocks';
+import { MoviesMethods } from '../../../resources/movies/api/methods';
+import { applyCollectionQuery, SortDir } from '../queries';
 
 describe('#applyCollectionQuery', () => {
   beforeEach(async () => {

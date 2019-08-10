@@ -1,20 +1,20 @@
-import { Database } from '@connection';
+import { Database } from '@database/index';
 
 let usersGeneratorModule;
 let actorsGeneratorModule;
 let moviesGeneratorModule;
 
 beforeEach(() => {
-  jest.unmock('../../resources/users/fixtures/generators');
-  usersGeneratorModule = require('../../resources/users/fixtures/generators');
+  jest.unmock('../../../resources/users/fixtures/generators');
+  usersGeneratorModule = require('../../../resources/users/fixtures/generators');
   usersGeneratorModule.usersGenerator = jest.fn();
 
-  jest.unmock('../../resources/actors/fixtures/generators');
-  actorsGeneratorModule = require('../../resources/actors/fixtures/generators');
+  jest.unmock('../../../resources/actors/fixtures/generators');
+  actorsGeneratorModule = require('../../../resources/actors/fixtures/generators');
   actorsGeneratorModule.actorsGenerator = jest.fn();
 
-  jest.unmock('../../resources/movies/fixtures/generators');
-  moviesGeneratorModule = require('../../resources/movies/fixtures/generators');
+  jest.unmock('../../../resources/movies/fixtures/generators');
+  moviesGeneratorModule = require('../../../resources/movies/fixtures/generators');
   moviesGeneratorModule.moviesGenerator = jest.fn();
 });
 

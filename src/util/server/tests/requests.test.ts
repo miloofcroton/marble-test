@@ -1,5 +1,5 @@
 import { HttpRequest } from '@marblejs/core';
-import { getProtocol, getHostname } from '../http';
+import { getProtocol, getHostname } from '../requests';
 
 const mockHttpRequest = (headers: Record<string, any> = {}) => ({
   headers: headers || {},

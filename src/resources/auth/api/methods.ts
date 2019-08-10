@@ -1,6 +1,6 @@
 import { authorize$ as jwt$, VerifyOptions } from '@marblejs/middleware-jwt';
 import { flatMap } from 'rxjs/operators';
-import { neverNullable } from '../../../util/rxjs';
+import { neverNullable } from '../../../util/etc/rxjs';
 import { Config } from '@config';
 import { UsersMethods } from '../../../resources/users/api/methods';
 import { Payload } from './helpers';

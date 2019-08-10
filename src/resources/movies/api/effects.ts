@@ -2,8 +2,8 @@ import { HttpStatus, HttpError, HttpEffect, use } from '@marblejs/core';
 import { requestValidator$, t } from '@marblejs/middleware-io';
 import { of, throwError } from 'rxjs';
 import { mergeMap, map, catchError } from 'rxjs/operators';
-import { collectionQueryValidator$ } from '../../../util/validators';
-import { neverNullable } from '../../../util/rxjs';
+import { collectionQueryValidator$ } from '../../../util/database/validators';
+import { neverNullable } from '../../../util/etc/rxjs';
 import { MoviesMethods, SORTING_FIELDS } from './methods';
 import { applyHostname, applyHostnameForCollection } from './helpers';
 

@@ -1,5 +1,7 @@
 import { throwError, of } from 'rxjs';
-import { isNullable } from './any';
+
+export const isNullable = (data: any) =>
+  data === null || data === undefined;
 
 export const neverNullable = <T>(data: T) =>
   isNullable(data)

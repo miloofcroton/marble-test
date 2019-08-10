@@ -26,8 +26,10 @@
     "paths": {
       // "@app": ["./app"],
       // "@api/*": ["api/*"],
-      "@config": ["config"],
-      "@connection": ["util/connection"],
+      "@config": ["util/config"],
+      // "@connection": ["util/connection"],
+      "@database/*": ["util/database/*"],
+      "@resources/*": ["resources/*"],
       // "@seed": ["seed"],
       // "@tests": ["tests"],
       // "@util": ["util"],

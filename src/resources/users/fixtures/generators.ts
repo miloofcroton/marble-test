@@ -1,5 +1,5 @@
 import * as faker from 'faker';
-import { generateCollectionFromModel } from '../../../util/mocks';
+import { generateCollectionFromModel } from '../../../util/database/mocks';
 import { UserRole, User } from '../api/models';
 
 const users = [

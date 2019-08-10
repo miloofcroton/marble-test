@@ -1,4 +1,4 @@
-import { SortDir } from '../../../util/helpers';
+import { SortDir } from '../../../util/database/queries';
 import { mockMovie } from '../fixtures/mocks';
 import { MoviesMethods } from '../api/methods';
 

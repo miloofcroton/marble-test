@@ -1,4 +1,4 @@
-import { Database } from '@connection';
+import { Database } from '@database/index';
 
 beforeAll(async () => {
   await Database.connectTest();

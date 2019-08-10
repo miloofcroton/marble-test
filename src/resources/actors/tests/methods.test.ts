@@ -1,5 +1,5 @@
 import { mockActor } from '../fixtures/mocks';
-import { SortDir } from '../../../util/helpers';
+import { SortDir } from '../../../util/database/queries';
 import { ActorsMethods } from '../api/methods';
 
 describe('Actors DAO', () => {

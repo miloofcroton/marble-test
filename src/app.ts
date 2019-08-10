@@ -1,6 +1,7 @@
 import { httpListener } from '@marblejs/core';
 import { bodyParser$ } from '@marblejs/middleware-body';
-import { logger$, cors$ } from './middleware';
+import { cors$ } from './middleware/cors';
+import { logger$ } from './middleware/logger';
 import { routes$ } from './resources';
 
 const middlewares = [

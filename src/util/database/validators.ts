@@ -1,5 +1,5 @@
 import { requestValidator$, t } from '@marblejs/middleware-io';
-import { SortDir } from './helpers';
+import { SortDir } from './queries';
 
 type CollectionQueryValidatorOpts = {
   sortBy: string[];
