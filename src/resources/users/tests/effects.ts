@@ -6,8 +6,9 @@ import { mockUser } from '../../users/mocks';
 import { UsersMethods } from '../methods';
 import httpListener from '../../../app';
 
+const app = httpListener.run(createContext());
+
 describe('getMeEffect$', () => {
-  const app = httpListener.run(createContext());
 
   test('GET /api/v1/users/me returns 200 and currently logged user details', async () => {
     const user = await mockUser();
@@ -49,11 +50,14 @@ describe('getMeEffect$', () => {
 });
 
 describe('getUserListEffect$', () => {
-  const app = httpListener.run(createContext());
 
   test('GET /api/v1/users/ returns 200 status and list of users', async () => {
     const users = [await mockUser(), await mockUser()];
     const token = await mockAuthorizationFor(users[0])(app);
+
+
+    console.log(users)
+    console.log(token)
 
     return request(app)
       .get('/api/v1/users')

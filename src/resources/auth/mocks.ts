@@ -1,6 +1,6 @@
 import * as request from 'supertest';
 import { InstanceType } from 'typegoose';
-import { User } from '../../api/users/models';
+import { User } from '../../resources/users/models';
 
 export const mockAuthorizationFor = (user: InstanceType<User>) => async (app) => {
   const { email: login, password } = user;

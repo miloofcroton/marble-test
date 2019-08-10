@@ -1,5 +1,5 @@
 import { combineRoutes, EffectFactory } from '@marblejs/core';
-import { authorize$ } from '../../api/auth/methods';
+import { authorize$ } from '../../resources/auth/methods';
 import { getActorListEffect$, getActorEffect$ } from './effects';
 
 const getActorList$ = EffectFactory

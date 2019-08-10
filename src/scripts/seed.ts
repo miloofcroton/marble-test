@@ -1,7 +1,7 @@
 import { Database } from '@connection';
-import { usersGenerator } from '../api/users/fixtures';
-import { actorsGenerator } from '../api/actors/fixtures';
-import { moviesGenerator } from '../api/movies/fixtures';
+import { usersGenerator } from '../resources/users/fixtures';
+import { actorsGenerator } from '../resources/actors/fixtures';
+import { moviesGenerator } from '../resources/movies/fixtures';
 
 const REGISTERED_GENERATORS = [
   usersGenerator,

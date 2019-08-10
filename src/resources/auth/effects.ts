@@ -5,7 +5,7 @@ import { of, throwError } from 'rxjs';
 import { mergeMap, map, catchError } from 'rxjs/operators';
 import { neverNullable } from '../../util/rxjs';
 import { Config } from '@config';
-import { UsersMethods } from '../../api/users/methods';
+import { UsersMethods } from '../../resources/users/methods';
 import { generateTokenPayload } from './helpers';
 
 const validator$ = requestValidator$({

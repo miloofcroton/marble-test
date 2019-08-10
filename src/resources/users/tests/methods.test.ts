@@ -1,5 +1,5 @@
 import { mockUser } from '../mocks';
-import { LoginCredentials } from '../../../api/auth/models';
+import { LoginCredentials } from '../../../resources/auth/models';
 import { UsersMethods } from '../methods';
 
 describe('Users DAO', () => {

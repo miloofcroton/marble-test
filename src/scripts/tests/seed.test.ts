@@ -5,16 +5,16 @@ let actorsGeneratorModule;
 let moviesGeneratorModule;
 
 beforeEach(() => {
-  jest.unmock('../../api/users/fixtures');
-  usersGeneratorModule = require('../../api/users/fixtures');
+  jest.unmock('../../resources/users/fixtures');
+  usersGeneratorModule = require('../../resources/users/fixtures');
   usersGeneratorModule.usersGenerator = jest.fn();
 
-  jest.unmock('../../api/actors/fixtures');
-  actorsGeneratorModule = require('../../api/actors/fixtures');
+  jest.unmock('../../resources/actors/fixtures');
+  actorsGeneratorModule = require('../../resources/actors/fixtures');
   actorsGeneratorModule.actorsGenerator = jest.fn();
 
-  jest.unmock('../../api/movies/fixtures');
-  moviesGeneratorModule = require('../../api/movies/fixtures');
+  jest.unmock('../../resources/movies/fixtures');
+  moviesGeneratorModule = require('../../resources/movies/fixtures');
   moviesGeneratorModule.moviesGenerator = jest.fn();
 });
 
