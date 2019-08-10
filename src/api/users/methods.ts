@@ -1,6 +1,6 @@
 import { from } from 'rxjs';
-import { LoginCredentials } from '../auth';
-import { User, USER_SECURE_FIELDS, USER_PUBLIC_FIELDS } from './model';
+import { LoginCredentials } from '../auth/models';
+import { User, USER_SECURE_FIELDS, USER_PUBLIC_FIELDS } from './models';
 
 export namespace UsersMethods {
   export const model = new User().getModelForClass(User);

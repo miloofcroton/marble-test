@@ -1,5 +1,5 @@
-import { SortDir } from '@util';
-import { mockMovie } from '@tests';
+import { SortDir } from '../../../util/helpers';
+import { mockMovie } from '../mocks';
 import { MoviesMethods } from '../methods';
 
 describe('Movies DAO', () => {

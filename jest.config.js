@@ -19,19 +19,19 @@ module.exports = {
     'js',
     'json'
   ],
-  setupTestFrameworkScriptFile: "./src/tests/setup.ts",
+  setupTestFrameworkScriptFile: "./src/util/setupTests.ts",
   globals: {
     'ts-jest': {
       tsConfigFile: './tsconfig.json',
     }
   },
   moduleNameMapper: {
-    '@app': '<rootDir>/src/app.ts',
-    '@api/(.*)': '<rootDir>/src/api/$1',
+    // '@app': '<rootDir>/src/app.ts',
+    // '@api/(.*)': '<rootDir>/src/api/$1',
     '@config': '<rootDir>/src/config',
     '@connection': '<rootDir>/src/util/connection',
-    '@seed': '<rootDir>/src/seed',
-    '@tests': '<rootDir>/src/tests',
-    '@util': '<rootDir>/src/util',
+    // '@seed': '<rootDir>/src/scripts/seed',
+    // '@tests': '<rootDir>/src/tests',
+    // '@util': '<rootDir>/src/util',
   }
 };

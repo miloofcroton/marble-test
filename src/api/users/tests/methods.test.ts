@@ -1,5 +1,5 @@
-import { mockUser } from '@tests';
-import { LoginCredentials } from '@api/auth';
+import { mockUser } from '../mocks';
+import { LoginCredentials } from '../../../api/auth/models';
 import { UsersMethods } from '../methods';
 
 describe('Users DAO', () => {

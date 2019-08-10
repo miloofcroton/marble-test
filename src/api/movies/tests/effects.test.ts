@@ -1,7 +1,9 @@
 import * as request from 'supertest';
 import { createContext } from '@marblejs/core';
-import { mockAuthorizationFor, mockUser, mockMovie, mockMovieActor } from '@tests';
-import httpListener from '@app';
+import { mockAuthorizationFor } from '../../auth/mocks';
+import { mockUser } from '../../users/mocks';
+import { mockMovie, mockMovieActor } from '../../movies/mocks';
+import httpListener from '../../../app';
 
 describe('getMovie$', () => {
   const app = httpListener.run(createContext());

@@ -1,6 +1,6 @@
 import { generateExpirationInHours } from '@marblejs/middleware-jwt';
 import { InstanceType } from 'typegoose';
-import { User } from '@api/users';
+import { User } from '../../api/users/models';
 
 export const generateTokenPayload = (user: InstanceType<User>) => ({
   _id: user.id,

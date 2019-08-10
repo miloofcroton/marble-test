@@ -1,6 +1,7 @@
-import { applyCollectionQuery, CollectionQuery } from '@util';
+import { applyCollectionQuery } from '../../util/helpers';
+import { CollectionQuery } from '../../util/validators';
 import { from } from 'rxjs';
-import { Actor } from './model';
+import { Actor } from './models';
 
 export const SORTING_FIELDS = ['_id', 'name', 'country', 'gender'];
 

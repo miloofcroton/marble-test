@@ -1,4 +1,4 @@
-import { generateCollectionFromModel } from '../generator';
+import { generateCollectionFromModel } from '../../util/mocks';
 
 const saveMock = jest.fn(() => Promise.resolve());
 

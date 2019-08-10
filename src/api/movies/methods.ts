@@ -1,6 +1,7 @@
-import { applyCollectionQuery, CollectionQuery } from '@util';
+import { applyCollectionQuery } from '../../util/helpers';
+import { CollectionQuery } from '../../util/validators';
 import { from } from 'rxjs';
-import { Movie } from './model';
+import { Movie } from './models';
 
 export const SORTING_FIELDS = ['_id', 'title', 'director', 'year', 'metascore'];
 

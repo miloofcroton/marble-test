@@ -5,16 +5,16 @@ let actorsGeneratorModule;
 let moviesGeneratorModule;
 
 beforeEach(() => {
-  jest.unmock('../users.generator');
-  usersGeneratorModule = require('../users.generator');
+  jest.unmock('../../api/users/fixtures');
+  usersGeneratorModule = require('../../api/users/fixtures');
   usersGeneratorModule.usersGenerator = jest.fn();
 
-  jest.unmock('../actors.generator');
-  actorsGeneratorModule = require('../actors.generator');
+  jest.unmock('../../api/actors/fixtures');
+  actorsGeneratorModule = require('../../api/actors/fixtures');
   actorsGeneratorModule.actorsGenerator = jest.fn();
 
-  jest.unmock('../movies.generator');
-  moviesGeneratorModule = require('../movies.generator');
+  jest.unmock('../../api/movies/fixtures');
+  moviesGeneratorModule = require('../../api/movies/fixtures');
   moviesGeneratorModule.moviesGenerator = jest.fn();
 });
 
@@ -24,7 +24,7 @@ test('#seed seeds database with registered generators', done => {
   spyOn(Database, 'drop').and.callFake(() => Promise.resolve());
   spyOn(Database, 'disconnect').and.callFake(() => Promise.resolve());
 
-  require('../index');
+  require('../seed');
 
   // then
   process.nextTick(() => {

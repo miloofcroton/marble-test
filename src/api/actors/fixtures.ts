@@ -1,5 +1,5 @@
-import { generateCollectionFromModel } from './generator';
-import { Actor, Gender } from '@api/actors';
+import { generateCollectionFromModel } from '../../util/mocks';
+import { Actor, Gender } from './models';
 
 const actors = [
   {

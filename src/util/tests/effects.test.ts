@@ -2,7 +2,7 @@ import * as request from 'supertest';
 import { throwError } from 'rxjs';
 import { createContext } from '@marblejs/core';
 import * as FileHelper from '@marblejs/core/dist/+internal/files';
-import httpListener from '@app';
+import httpListener from '../../app';
 
 describe('getFileEffect$', () => {
   const app = httpListener.run(createContext());

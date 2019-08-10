@@ -1,9 +1,10 @@
 import * as request from 'supertest';
 import { of } from 'rxjs';
 import { createContext } from '@marblejs/core';
-import { mockUser, mockAuthorizationFor } from '@tests';
+import { mockAuthorizationFor } from '../../auth/mocks';
+import { mockUser } from '../../users/mocks';
 import { UsersMethods } from '../methods';
-import httpListener from '@app';
+import httpListener from '../../../app';
 
 describe('getMeEffect$', () => {
   const app = httpListener.run(createContext());

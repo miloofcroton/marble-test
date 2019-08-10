@@ -1,6 +1,6 @@
 import { of, throwError } from 'rxjs';
-import { UsersMethods } from '@api/users';
-import { verifyPayload$ } from '../middleware';
+import { UsersMethods } from '../../users/methods';
+import { verifyPayload$ } from '../methods';
 import { Payload } from '../helpers';
 
 describe('Auth middleware', () => {

@@ -1,5 +1,5 @@
-import { mockActor } from '@tests';
-import { SortDir } from '@util';
+import { mockActor } from '../mocks';
+import { SortDir } from '../../../util/helpers';
 import { ActorsMethods } from '../methods';
 
 describe('Actors DAO', () => {

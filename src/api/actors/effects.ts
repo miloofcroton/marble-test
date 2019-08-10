@@ -2,7 +2,8 @@ import { HttpError, HttpStatus, HttpEffect, use } from '@marblejs/core';
 import { requestValidator$, t } from '@marblejs/middleware-io';
 import { throwError, of } from 'rxjs';
 import { mergeMap, map, catchError } from 'rxjs/operators';
-import { neverNullable, collectionQueryValidator$ } from '@util';
+import { neverNullable } from '../../util/rxjs';
+import { collectionQueryValidator$ } from '../../util/validators';
 import { applyHostname, applyHostnameForCollection } from './helpers';
 import { ActorsMethods, SORTING_FIELDS } from './methods';
 
