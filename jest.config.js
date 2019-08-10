@@ -9,9 +9,9 @@ module.exports = {
     '.d.ts$',
     '.test.ts',
     'src/index.ts',
-    'src/config',
-    'util/connection/database',
-    'util/connection/server',
+    'src/util/config',
+    'util/database/index.ts',
+    'util/server/index.ts',
   ],
   collectCoverageFrom : ['src/**/*.ts'],
   moduleFileExtensions: [
@@ -26,14 +26,11 @@ module.exports = {
     }
   },
   moduleNameMapper: {
-    // '@app': '<rootDir>/src/app.ts',
-    // '@api/(.*)': '<rootDir>/src/api/$1',
     '@config': '<rootDir>/src/util/config',
-    // '@connection': '<rootDir>/src/util/connection',
     '@database/(.*)': '<rootDir>/src/util/database/$1',
-    '@resources/(.*)': '<rootDir>/src/resources/$1',
+    // '@app': '<rootDir>/src/app.ts',
+    // '@resources/(.*)': '<rootDir>/src/resources/$1',
     // '@seed': '<rootDir>/src/scripts/seed',
-    // '@tests': '<rootDir>/src/tests',
-    // '@util': '<rootDir>/src/util',
+    // '@util/(.*)': '<rootDir>/src/util/$1',
   }
 };
