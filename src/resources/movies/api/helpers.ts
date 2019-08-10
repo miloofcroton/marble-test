@@ -1,7 +1,7 @@
 import { HttpRequest } from '@marblejs/core';
 import { InstanceType } from 'typegoose';
 import { getHostname } from '../../../util/server/requests';
-import { CollectionQueryResult } from '../../../util/helpers';
+import { CollectionQueryResult } from '../../../util/database/queries';
 import { Movie } from './models';
 
 export const applyHostname = (req: HttpRequest) => (movie: InstanceType<Movie>): Movie => ({
