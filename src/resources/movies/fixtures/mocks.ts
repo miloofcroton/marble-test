@@ -1,6 +1,6 @@
 import * as faker from 'faker';
-import { MovieGenre, MovieActor } from './models';
-import { MoviesMethods } from './methods';
+import { MovieGenre, MovieActor } from '../api/models';
+import { MoviesMethods } from '../api/methods';
 
 export const mockMovieActor = (): MovieActor => ({
   imdbId: faker.random.uuid(),

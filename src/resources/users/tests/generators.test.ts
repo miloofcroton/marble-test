@@ -1,10 +1,10 @@
-import { usersGenerator } from '../fixtures';
+import { usersGenerator } from '../fixtures/generators';
 
 let generatorModule;
 
 beforeEach(() => {
-  jest.unmock('../fixtures');
-  generatorModule = require('../fixtures');
+  jest.unmock('../fixtures/generators');
+  generatorModule = require('../fixtures/generators');
   generatorModule.generateCollectionFromModel = jest.fn(
     () => jest.fn(
       () => Promise.resolve()

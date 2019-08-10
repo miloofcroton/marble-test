@@ -1,5 +1,5 @@
-import { mockMovie } from '../../resources/movies/mocks';
-import { MoviesMethods } from '../../resources/movies/methods';
+import { mockMovie } from '../../resources/movies/fixtures/mocks';
+import { MoviesMethods } from '../../resources/movies/api/methods';
 import { applyCollectionQuery, SortDir } from '../helpers';
 
 describe('#applyCollectionQuery', () => {

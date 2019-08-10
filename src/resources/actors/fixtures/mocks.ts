@@ -1,6 +1,6 @@
 import * as faker from 'faker';
-import { ActorsMethods } from '../../resources/actors/methods';
-import { Gender } from '../../resources/actors/models';
+import { ActorsMethods } from '../../../resources/actors/api/methods';
+import { Gender } from '../../../resources/actors/api/models';
 
 export const mockActor = async () =>
   ActorsMethods.model.create({

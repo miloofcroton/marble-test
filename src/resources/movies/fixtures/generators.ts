@@ -1,5 +1,5 @@
-import { generateCollectionFromModel } from '../../util/mocks';
-import { Movie, MovieGenre } from './models';
+import { generateCollectionFromModel } from '../../../util/mocks';
+import { Movie, MovieGenre } from '../api/models';
 
 const movies = [
   {

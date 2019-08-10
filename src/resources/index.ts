@@ -1,9 +1,9 @@
 import { combineRoutes, EffectFactory } from '@marblejs/core';
 import { versionEffect$, preflightEffect$, getFileEffect$, notFoundEffect$ } from '../util/effects';
-import { auth$ } from './auth/api';
-import { users$ } from './users/api';
-import { actors$ } from './actors/api';
-import { movies$ } from './movies/api';
+import { auth$ } from './auth/api/routes';
+import { users$ } from './users/api/routes';
+import { actors$ } from './actors/api/routes';
+import { movies$ } from './movies/api/routes';
 
 const root$ = EffectFactory
   .matchPath('/')
@@ -25,7 +25,7 @@ const notFound$ = EffectFactory
   .matchType('*')
   .use(notFoundEffect$);
 
-export const api$ = combineRoutes('/api/v1', [
+export const routes$ = combineRoutes('/api/v1', [
   root$,
   auth$,
   users$,

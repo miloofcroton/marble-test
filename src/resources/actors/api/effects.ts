@@ -1,11 +1,11 @@
-import { HttpStatus, HttpError, HttpEffect, use } from '@marblejs/core';
+import { HttpError, HttpStatus, HttpEffect, use } from '@marblejs/core';
 import { requestValidator$, t } from '@marblejs/middleware-io';
-import { of, throwError } from 'rxjs';
+import { throwError, of } from 'rxjs';
 import { mergeMap, map, catchError } from 'rxjs/operators';
-import { collectionQueryValidator$ } from '../../util/validators';
-import { neverNullable } from '../../util/rxjs';
-import { MoviesMethods, SORTING_FIELDS } from './methods';
+import { neverNullable } from '../../../util/rxjs';
+import { collectionQueryValidator$ } from '../../../util/validators';
 import { applyHostname, applyHostnameForCollection } from './helpers';
+import { ActorsMethods, SORTING_FIELDS } from './methods';
 
 const validator$ = requestValidator$({
   params: t.type({
@@ -13,27 +13,27 @@ const validator$ = requestValidator$({
   })
 });
 
-export const getMovieEffect$: HttpEffect = req$ =>
+export const getActorEffect$: HttpEffect = req$ =>
   req$.pipe(
     use(validator$),
     mergeMap(req => of(req.params.id).pipe(
-      mergeMap(MoviesMethods.findOneByImdbID),
+      mergeMap(ActorsMethods.findOneByImdbID),
       mergeMap(neverNullable),
       map(applyHostname(req)),
-      map(movie => ({ body: movie })),
+      map(actor => ({ body: actor })),
       catchError(() => throwError(
-        new HttpError('Movie does not exist', HttpStatus.NOT_FOUND)
+        new HttpError('Actor does not exist', HttpStatus.NOT_FOUND)
       ))
     ))
   );
 
-export const getMovieListEffect$: HttpEffect = req$ =>
+export const getActorListEffect$: HttpEffect = req$ =>
   req$.pipe(
     use(collectionQueryValidator$({ sortBy: SORTING_FIELDS })),
     mergeMap(req => of(req).pipe(
       map(req => req.query),
-      mergeMap(MoviesMethods.findAll),
+      mergeMap(ActorsMethods.findAll),
       map(applyHostnameForCollection(req)),
-      map(movies => ({ body: movies })),
+      map(actors => ({ body: actors })),
     ))
   );

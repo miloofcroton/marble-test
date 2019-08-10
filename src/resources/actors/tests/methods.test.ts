@@ -1,6 +1,6 @@
-import { mockActor } from '../mocks';
+import { mockActor } from '../fixtures/mocks';
 import { SortDir } from '../../../util/helpers';
-import { ActorsMethods } from '../methods';
+import { ActorsMethods } from '../api/methods';
 
 describe('Actors DAO', () => {
   test('#findAll finds all actors', async (done) => {

@@ -1,5 +1,5 @@
-import { applyCollectionQuery } from '../../util/helpers';
-import { CollectionQuery } from '../../util/validators';
+import { applyCollectionQuery } from '../../../util/helpers';
+import { CollectionQuery } from '../../../util/validators';
 import { from } from 'rxjs';
 import { Actor } from './models';
 

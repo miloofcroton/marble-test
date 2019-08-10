@@ -1,8 +1,8 @@
 import { createContext } from '@marblejs/core';
 import * as request from 'supertest';
-import { mockAuthorizationFor } from '../../auth/mocks';
-import { mockActor } from '../../actors/mocks';
-import { mockUser } from '../../users/mocks';
+import { mockAuthorizationFor } from '../../auth/fixtures/mocks';
+import { mockActor } from '../../actors/fixtures/mocks';
+import { mockUser } from '../../users/fixtures/mocks';
 import httpListener from '../../../app';
 
 describe('getActor$', () => {

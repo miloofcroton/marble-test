@@ -1,7 +1,7 @@
 import { of, throwError } from 'rxjs';
-import { UsersMethods } from '../../users/methods';
-import { verifyPayload$ } from '../methods';
-import { Payload } from '../helpers';
+import { UsersMethods } from '../../users/api/methods';
+import { verifyPayload$ } from '../api/methods';
+import { Payload } from '../api/helpers';
 
 describe('Auth middleware', () => {
   test('#verifyPayload$ checks if user exists in DB', done => {

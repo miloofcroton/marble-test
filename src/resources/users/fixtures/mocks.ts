@@ -1,6 +1,6 @@
 import * as faker from 'faker';
-import { UsersMethods } from './methods';
-import { UserRole } from './models';
+import { UsersMethods } from '../api/methods';
+import { UserRole } from '../api/models';
 
 export const mockUser = async (roles = [UserRole.USER]) =>
   UsersMethods.model.create({

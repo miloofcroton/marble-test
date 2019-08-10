@@ -3,9 +3,9 @@ import { requestValidator$, t } from '@marblejs/middleware-io';
 import { generateToken } from '@marblejs/middleware-jwt';
 import { of, throwError } from 'rxjs';
 import { mergeMap, map, catchError } from 'rxjs/operators';
-import { neverNullable } from '../../util/rxjs';
+import { neverNullable } from '../../../util/rxjs';
 import { Config } from '@config';
-import { UsersMethods } from '../../resources/users/methods';
+import { UsersMethods } from '../../../resources/users/api/methods';
 import { generateTokenPayload } from './helpers';
 
 const validator$ = requestValidator$({

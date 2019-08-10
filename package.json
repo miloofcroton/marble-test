@@ -76,7 +76,7 @@
     "docker": "docker-compose -f .docker/docker-compose.yml up --build -d",
     "doc": "mkdir -p ./dist && hercule src/resources/index.apib -o ./dist/docs.apib",
     "doc:preview": "apiary preview --path dist/docs.apib",
-    "db:seed": "yarn ts-node -r tsconfig-paths/register src/scripts/seed.ts"
+    "db:seed": "yarn ts-node -r tsconfig-paths/register src/util/seed.ts"
   },
   "lint-staged": {
     "*.ts": [

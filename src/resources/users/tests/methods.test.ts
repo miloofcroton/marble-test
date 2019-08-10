@@ -1,6 +1,6 @@
-import { mockUser } from '../mocks';
-import { LoginCredentials } from '../../../resources/auth/models';
-import { UsersMethods } from '../methods';
+import { mockUser } from '../fixtures/mocks';
+import { LoginCredentials } from '../../../resources/auth/api/models';
+import { UsersMethods } from '../api/methods';
 
 describe('Users DAO', () => {
   test('#findByCredentials finds user by credentials', async (done) => {

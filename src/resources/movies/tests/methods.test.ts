@@ -1,6 +1,6 @@
 import { SortDir } from '../../../util/helpers';
-import { mockMovie } from '../mocks';
-import { MoviesMethods } from '../methods';
+import { mockMovie } from '../fixtures/mocks';
+import { MoviesMethods } from '../api/methods';
 
 describe('Movies DAO', () => {
   test('#findAll finds all movies', async (done) => {

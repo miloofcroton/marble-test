@@ -1,9 +1,9 @@
 import * as request from 'supertest';
 import { of } from 'rxjs';
 import { createContext } from '@marblejs/core';
-import { mockAuthorizationFor } from '../../auth/mocks';
-import { mockUser } from '../../users/mocks';
-import { UsersMethods } from '../methods';
+import { mockAuthorizationFor } from '../../auth/fixtures/mocks';
+import { mockUser } from '../../users/fixtures/mocks';
+import { UsersMethods } from '../api/methods';
 import httpListener from '../../../app';
 
 describe('getUserListEffect$', () => {
@@ -36,7 +36,6 @@ describe('getUserListEffect$', () => {
       .expect(401, { error: { status: 401, message: 'Unauthorized' } })
   );
 });
-
 
 describe('getMeEffect$', () => {
   const app = httpListener.run(createContext());

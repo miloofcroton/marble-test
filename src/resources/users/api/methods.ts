@@ -1,5 +1,5 @@
 import { from } from 'rxjs';
-import { LoginCredentials } from '../auth/models';
+import { LoginCredentials } from '../../auth/api/models';
 import { User, USER_SECURE_FIELDS, USER_PUBLIC_FIELDS } from './models';
 
 export namespace UsersMethods {
